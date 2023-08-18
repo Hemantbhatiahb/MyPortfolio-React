@@ -1,6 +1,7 @@
 import React from "react";
 import project1 from "../../assets/images/project1.png";
 import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Projects() {
   return (
@@ -49,9 +50,9 @@ function Projects() {
           </div>
 
           <div className="flex  items-center gap-6 mt-16 transition delay-1000">
-            <button href="fds#.com" target="_blank" className="cursor-pointer">
+            <Link to="https://github.com/Hemantbhatiahb/React-Portfolio/tree/master" target="_blank" className="cursor-pointer">
               <BsGithub className="w-8 h-8 dark:text-white hover:opacity-80" />
-            </button>
+            </Link>
 
             <button
               href=".com"

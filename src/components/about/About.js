@@ -1,6 +1,7 @@
 import React from "react";
-import { BsGit, BsLinkedin,BsTwitter } from "react-icons/bs";
+import { BsGit, BsLinkedin, BsTwitter } from "react-icons/bs";
 import devhb from "../../assets/images/dev-hb-wave.png";
+import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="text-center p-10 lg:mt-12 lg:flex  lg:p-0 lg:items-center lg:justify-center">
@@ -23,14 +24,14 @@ function About() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsLinkedin className="hover:translate-y-1 hover:text-black dark:hover:text-gray-300"/>
+            <BsLinkedin className="hover:translate-y-1 hover:text-black dark:hover:text-gray-300" />
           </a>
           <a
             href="https://github.com/Hemantbhatiahb"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BsGit className="hover:translate-y-1 hover:text-black dark:hover:text-gray-300"/>
+            <BsGit className="hover:translate-y-1 hover:text-black dark:hover:text-gray-300" />
           </a>
           <a
             href="https://twitter.com/hemantb5496"
@@ -39,6 +40,17 @@ function About() {
           >
             <BsTwitter className="text-4xl hover:translate-y-1 hover:text-black dark:hover:text-gray-300" />
           </a>
+        </div>
+        <div className="mt-6  text-center">
+          <Link
+            to="https://clri-ltc.ca/files/2018/09/TEMP-PDF-Document.pdf"
+            download="hemantResume"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base font-semibold hover:scale-110 uppercase px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-teal-400 text-black dark:text-white"
+          >
+            Resume / Cv
+          </Link>
         </div>
       </div>
       <div className="relative mx-auto w-80 h-80 mt-20 bg-gradient-to-b overflow-hidden from-teal-500 rounded-full lg:mt-0 shrink-0">

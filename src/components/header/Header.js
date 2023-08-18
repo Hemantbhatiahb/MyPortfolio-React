@@ -3,9 +3,10 @@ import AppContext from "../../store/appContext";
 import { useContext, useState } from "react";
 import darkIcon from "../../assets/icons/darkicon.svg";
 import lightIcon from "../../assets/icons/lighticon.svg";
-import { Menu, X } from "lucide-react";
 import NavBar from "./NavBar";
 import { useNavigate } from "react-router-dom";
+import {RxCross1} from "react-icons/rx" ;
+import {AiOutlineMenu} from "react-icons/ai";
 function Header() {
   const appCtx = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +38,8 @@ function Header() {
           {isDarkMode && <img src={lightIcon} alt="light mode icon" />}
         </button>
 
-        <div className="flex w-10  justify-end md:hidden">
-          <button onClick={toggleNavBar}>{!isOpen ? <Menu /> : <X />}</button>
+        <div className="flex w-12  justify-end md:hidden">
+          <button onClick={toggleNavBar}>{!isOpen ? <AiOutlineMenu className="w-7 h-7"/> : <RxCross1 className="w-7 h-7"/>}</button>
         </div>
       </nav>
       {isOpen && (

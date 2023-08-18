@@ -3,24 +3,24 @@ import React from "react";
 import SkillDetail from "./SkillDetail";
 
 const skills = [
-  { name: "HTML", id: "sk1", level: 9 },
-  { name: "CSS", id: "sk2", level: 9 },
-  { name: "React", id: "sk3", level: 9 },
-  { name: "Javascript", id: "sk4", level: 9 },
-  { name: "Java", id: "sk5", level: 9 },
-  { name: "Firebase", id: "sk6", level: 9 },
-  { name: "TypeScript", id: "sk7", level: 9 },
-  { name: "Redux", id: "sk8", level: 9 },
-  { name: "C++", id: "sk9", level: 9 },
+  { name: "HTML", id: "sk1", level: 9  , fileName:'html.png'},
+  { name: "CSS", id: "sk2", level: 8  , fileName:'css-logo.png'},
+  { name: "React", id: "sk3", level: 8  , fileName:'react.svg'},
+  { name: "Javascript", id: "sk4", level: 8 , fileName:'javascript.png' },
+  { name: "Java", id: "sk5", level: 8  , fileName:'java.svg'},
+  { name: "Firebase", id: "sk6", level: 7  , fileName:'firebase.svg'},
+  { name: "TypeScript", id: "sk7", level: 7  , fileName:'typescript.png'},
+  { name: "Redux", id: "sk8", level: 8  , fileName:'redux.svg'},
+  { name: "C++", id: "sk9", level: 8 , fileName:'c.svg' },
 ];
 
 const otherSkills = [
-  { name: "PostMan", id: "osk1" },
-  { name: "TailWind", id: "osk2" },
-  { name: "Rest API", id: "osk3" },
-  { name: "VS Code", id: "osk4" },
-  { name: "Windows", id: "osk5" },
-  { name: "Git", id: "osk6" },
+  { name: "PostMan", id: "os1", fileName:'postman.svg' },
+  { name: "TailWind", id: "os2", fileName:'tailwind.svg' },
+  { name: "Rest API", id: "os3", fileName:'restapi.svg' },
+  { name: "VS Code", id: "os4" , fileName:'vscode.svg'},
+  { name: "Windows", id: "os5", fileName:'windows.svg' },
+  { name: "Git", id: "os6", fileName:'git.svg' },
 ];
 
 function Skills() {
@@ -48,7 +48,7 @@ function Skills() {
         ))}
       </div>
 
-      {/* <div className="my-12">
+      <div className="my-12">
         <h3 className="text-3xl  py-2 dark:text-white font-semibold">
           Other Technologies
         </h3>
@@ -57,7 +57,7 @@ function Skills() {
             <SkillDetail name={skill.name} id={skill.id} key={skill.id} />
           ))}
         </div>
-      </div> */}
+      </div>
     </section>
   );
 }

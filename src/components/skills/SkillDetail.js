@@ -1,36 +1,58 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactCardFlip from "react-card-flip";
 import { useState } from "react";
-// import Icons from "./assets/images/code.png";
 
-const imageMap = {
-  sk1: "/../../assets/icons/html.png",
-  sk2: "../../assets/icons/css-logo.png",
-  sk3: "../../assets/icons/react.svg",
-  sk4: "../../assets/icons/javascript.png",
-  sk5: "../../assets/icons/java.svg",
-  sk6: "../../assets/icons/firebase.svg",
-  sk7: "../../assets/icons/typescript.png",
-  sk8: "../../assets/icons/redux.svg",
-  sk9: "../../assets/icons/c.svg",
+const getSkillsImagePath = (id) => {
+  switch (id) {
+    case "sk1":
+      return "html.png";
+    case "sk2":
+      return "css-logo.png";
+    case "sk3":
+      return "react.svg";
+    case "sk4":
+      return "javascript.png";
+    case "sk5":
+      return "java.svg";
+    case "sk6":
+      return "firebase.svg";
+    case "sk7":
+      return "typescript.png";
+    case "sk8":
+      return "redux.svg";
+    case "sk9":
+      return "c.svg";
+    default:
+      return "";
+  }
 };
 
-// console.log(Icons);
+const getOtherSkillsImagePath = (id) => {
+  switch (id) {
+    case "os1":
+      return "postman.svg";
+    case "os2":
+      return "tailwind.svg";
+    case "os3":
+      return "restapi.svg";
+    case "os4":
+      return "vscode.svg";
+    case "os5":
+      return "windows.svg";
+    case "os6":
+      return "git.svg";
+    default:
+      return "";
+  }
+};
 
 function SkillDetail({ id, name, level }) {
   const [isFlip, setIsFlipped] = useState(false);
-  const [imageSrc, setImageSrc] = useState(null);
-  console.log(imageMap[id])
   const cardFlipHandler = () => {
     setIsFlipped((prevValue) => !prevValue);
   };
 
-  useEffect(() => {
-    const loadImage = () => {
-      // import("../../assets/icons/html.png").then((img) => setImageSrc(img));
-    };
-    loadImage();
-  }, []);
+  const imagevalue = id.includes('sk') ? getSkillsImagePath(id) : getOtherSkillsImagePath(id);
 
   return (
     <ReactCardFlip isFlipped={isFlip} flipDirection="vertical">
@@ -39,9 +61,9 @@ function SkillDetail({ id, name, level }) {
         className="p-3 rounded-xl shadow-lg w-32 h-32 flex justify-center items-center dark:bg-slate-700 dark:shadow-slate-700 dark:shadow-md"
       >
         <img
-          src="../../assets/icons/html.png"
+          src={`/images/${imagevalue}`}
           className="w-16 h-16 object-cover object-center"
-          alt="html logo"
+          alt="logo"
         />
       </div>
       <div
