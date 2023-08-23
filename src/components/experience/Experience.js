@@ -8,8 +8,10 @@ const jobDetails = [
     endDate: "Present",
     location: "Bangalore, India",
     description: [
-      "- Developing screens and UI components for the web application using React and Tailwind",
-      "- Fixing UI issues and integrating backend APIs with Redux Saga",
+      "- Implemented a feature that allows users to provision and adjust the maximum count of restoration attempts for unprotected/protected connection",
+      "- Developed a UI page to add a backup route to the Service. This feature helps the user to move the traffic to the backup route in case of failure in the current route.",
+      "- Improved User Interface (UI) by addressing alignment issues, eliminating unnecessary scroll bars, and converting lengthy text info icons, resulting in a more streamlined and user-friendly experience",
+      "- Enhanced software quality through careful code reviews,proactive issue resolution and skillful use of REST APIs to retrieve and display data from database"
     ],
     id: "job1",
   },

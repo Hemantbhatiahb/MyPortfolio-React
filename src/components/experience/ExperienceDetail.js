@@ -14,9 +14,9 @@ function ExperienceDetail(props) {
               </p>
             </div>
             <p className="text-base mt-2 bg-gradient-to-r from-cyan-500 to-teal-500  text-transparent bg-clip-text">{item.location}</p>
-            <ul className="mt-3">
+            <ul className="mt-3 flex flex-col gap-2">
               {item.description.map((item) => (
-                <li className="dark:text-gray" key={Math.random().toString()}>
+                <li className="dark:text-gray  max-w-3xl" key={Math.random().toString()}>
                   {item}
                 </li>
               ))}
