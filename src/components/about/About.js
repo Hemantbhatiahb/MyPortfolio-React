@@ -43,7 +43,7 @@ function About() {
         </div>
         <div className="mt-6  text-center">
           <Link
-            to="https://clri-ltc.ca/files/2018/09/TEMP-PDF-Document.pdf"
+            to="https://drive.google.com/file/d/1u3nFiwR-biBU9W6LmDj6KLdvTkLUb0Ik/view?usp=sharing"
             download="hemantResume"
             target="_blank"
             rel="noopener noreferrer"
